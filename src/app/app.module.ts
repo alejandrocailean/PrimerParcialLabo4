@@ -11,10 +11,10 @@ import { ModifyMenuComponent } from './Components/Molecules/ModifyMenu/ModifyMen
 import { FooterComponent } from './Components/Organisms/Footer/Footer.component';
 import { NavComponent } from './Components/Organisms/Nav/Nav.component';
 import { DataService } from './Services/DataService/Data.service';
-import { ListComponent } from './Components/Molecules/list/list.component';
+import { ListComponent } from './Components/Molecules/List/list.component';
 import { RutaHomeComponent } from './Components/Pages/ruta-home/ruta-home.component';
 import { RutaErrorComponent } from './Components/Pages/ruta-error/ruta-error.component';
-import { OrderByPipe } from './Services/DataService/order-by.pipe';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { OrderByPipe } from './Services/DataService/order-by.pipe';
     ListComponent,
     RutaHomeComponent,
     RutaErrorComponent,
-    OrderByPipe
+    
   ],
   imports: [
     BrowserModule,

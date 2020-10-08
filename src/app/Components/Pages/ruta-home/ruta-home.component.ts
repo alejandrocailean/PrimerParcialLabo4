@@ -18,8 +18,7 @@ export class RutaHomeComponent implements OnInit {
   ngOnInit(): void {
    this.datos.getDatos('https://restcountries.eu/rest/v2/all')
    .subscribe((data)=>{
-     this.datosAPI=data;
-     this.datosAPI.sort( (a, b)=>b.region - a.region);
+     this.datosAPI=data;     
    });
    this.h_spinner=true;
    
