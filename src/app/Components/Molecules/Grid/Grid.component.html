@@ -1,0 +1,41 @@
+<h1 class="text-muted text-center ">{{titulo}} </h1>
+
+<div class="panel-body">  
+  <Table class="table table-striped">
+      <thead>
+        <tr>                 
+          <th>Nombre</th>         
+          <th>Continente</th> 
+          <th>Bandera</th>           
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listado ; index as i">
+          
+          <td>{{item.name}}</td>  
+          <td>{{item.region}}</td> 
+          <td><img src={{item.flag}} style="width: 3rem; height: 2rem;"> </td>
+          <td><button class="btn btn-info">Detalle</button><button class="btn btn-secondary" (click)='modificacion(i)'>Modificar</button>   </td>
+         </tr> 
+      </tbody>
+    </Table> 
+</div>
+
+<form >
+  <div class="fixed form-group " >
+      <label for="name"  class="col-sm-2 col-form-label"> Pais:  </label>
+       <div class="col-sm-10"> 
+         <input type="text" name="name" [(ngModel)]="modificar.name" class="form-control">
+        </div> 
+  
+      <label for="capital" class="col-sm-2 col-form-label"> Continente:   </label> 
+      <div class="col-sm-10"> 
+        <input type="text" name="region" [(ngModel)]="modificar.region" class="form-control"> 
+      </div><br>
+      <button class="btn btn-primary btn-sm" (click)='guardar()'>Guardar</button><button class="btn btn-danger btn-sm" (click)='h_menu=true'>Cancelar</button>
+  </div>
+</form>
+
+
+
